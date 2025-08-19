@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hooma - Connecting Homes, Creating Comfort</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+         header {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .logo-img {
+            height: 80px; /* Adjust this value to change logo size */
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        /* Main Content Styles */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 20px;
+        }
+        
+        /* Option Cards */
+        .option-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 60px;
+            width: 100%;
+        }
+        
+        .option-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .option-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+        }
+        
+        .option-card h2 {
+            margin-bottom: 20px;
+            color: #4f46e5;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .option-card p {
+            color: #64748b;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #4f46e5;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+        }
+        
+        .btn:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+        }
+        
+        /* Trust Section */
+        .trust-section {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #f1f5f9;
+            width: 100%;
+        }
+        
+        .trust-section h2 {
+            margin-bottom: 40px;
+            color: #4f46e5;
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .feature {
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #4f46e5;
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            color: #4f46e5;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        
+        .feature p {
+            color: #64748b;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        /* Help Desk */
+        .help-desk {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            width: 100%;
+        }
+        
+        .help-desk h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        
+        .help-desk p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        
+        .phone-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 15px;
+            letter-spacing: 1px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.2rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .option-cards {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            
+            .option-card {
+                padding: 30px 20px;
+            }
+            
+            .trust-section {
+                padding: 60px 20px;
+            }
+            
+            .trust-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .features {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+            
+            .feature {
+                max-width: 100%;
+            }
+            
+            .help-desk {
+                padding: 50px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/logo.png" alt="Hooma Logo" class="logo-img">
+            <div class="tagline">Connecting Homes, Creating Comfort</div>
+        </div>
+    </header>
+    
+    <div class="main-content">
+        <div class="option-cards">
+            <div class="option-card">
+                <h2>I'm a Landlord</h2>
+                <p>List your property and find reliable tenants</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScJvdlISHQNk_54ZwYoWHtWBi1jqePeaY4kTf87K_yf1KLjIw/viewform?usp=dialog" class="btn" target="_blank">List Your Property</a>
+            </div>
+            
+            <div class="option-card">
+                <h2>I'm Looking for a Home</h2>
+                <p>Find your perfect home with our verified listings</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScJvdlISHQNk_54ZwYoWHtWBi1jqePeaY4kTf87K_yf1KLjIw/viewform?usp=dialog" class="btn" target="_blank">Find a Home</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="trust-section">
+        <div class="container">
+            <h2>Trusted by Local Owners and Families</h2>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Verified Home Listings</h3>
+                    <p>All our listings are personally verified to ensure quality and accuracy, giving you peace of mind in your property search.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">❤️</div>
+                    <h3>Match Based on Lifestyle</h3>
+                    <p>We connect you with properties that perfectly match your unique lifestyle needs and preferences.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">👨‍💼</div>
+                    <h3>Fast Human Support</h3>
+                    <p>Our dedicated team is always ready to assist you with any questions or concerns you may have.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="help-desk">
+        <div class="container">
+            <h2>Need Help?</h2>
+            <p>Our support team is just a call away</p>
+            <div class="phone-number">8333041231</div>
+        </div>
+    </div>
+</body>
+</html>
