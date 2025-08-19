@@ -1,0 +1,21 @@
+{
+  "name": "Hooma",
+  "short_name": "Hooma",
+  "start_url": "/Hooma-Website/",
+  "display": "standalone",
+  "background_color": "#4f46e5",
+  "theme_color": "#4f46e5",
+  "description": "Connecting Homes, Creating Comfort",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
