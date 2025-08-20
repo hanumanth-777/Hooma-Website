@@ -3,29 +3,85 @@
   "name": "Hooma",
   "short_name": "Hooma",
   "start_url": "/Hooma-Website/",
+  "scope": "/Hooma-Website/",
   "display": "standalone",
   "background_color": "#4f46e5",
   "theme_color": "#4f46e5",
-  "description": "Connecting Homes, Creating Comfort",
-  "orientation": "portrait",
+  "description": "Connecting Homes, Creating Comfort - Find rental homes or list your property with verified listings",
+  "orientation": "any",
+  "categories": ["business", "finance", "lifestyle"],
+  "lang": "en",
+  "dir": "ltr",
   "icons": [
+    {
+      "src": "images/icon-48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "images/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "images/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
   "screenshots": [
     {
-      "src": "images/screenshot1.png",
+      "src": "https://via.placeholder.com/1280x720/4f46e5/FFFFFF?text=Hooma+App",
       "sizes": "1280x720",
       "type": "image/png",
-      "form_factor": "wide"
+      "form_factor": "wide",
+      "label": "Hooma Main Screen"
+    },
+    {
+      "src": "https://via.placeholder.com/750x1334/4f46e5/FFFFFF?text=Mobile+View",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Hooma Mobile View"
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+hooma",
+      "url": "/Hooma-Website/?url=%s"
     }
   ]
 }
