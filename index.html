@@ -310,7 +310,16 @@
             <div class="phone-number">8333041231</div>
         </div>
     </div>
+    <script>
+// Register service worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/Hooma-Website/sw.js')
+    .then(() => console.log('Service Worker Registered'))
+    .catch(err => console.log('Service Worker Registration Failed'));
+}
+</script>
 </body>
 
 </html>
+
 
