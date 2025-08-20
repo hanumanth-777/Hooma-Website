@@ -54,3 +54,28 @@ self.addEventListener('fetch', (event) => {
 });
 
 console.log('Service Worker loaded successfully');
+// ADVANCED FEATURES (Not needed for Hooma)
+// Push notifications
+self.addEventListener('push', function(event) {
+  const options = {
+    body: 'New homes available!',
+    icon: 'images/icon-192.png',
+    badge: 'images/icon-72.png'
+  };
+  event.waitUntil(self.registration.showNotification('Hooma', options));
+});
+
+// Background sync
+self.addEventListener('sync', function(event) {
+  if (event.tag === 'background-sync') {
+    event.waitUntil(doBackgroundSync());
+  }
+});
+
+function doBackgroundSync() {
+  return new Promise((resolve) => {
+    console.log('Background sync completed');
+    resolve();
+  });
+}
+
