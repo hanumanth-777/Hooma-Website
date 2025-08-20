@@ -14,18 +14,6 @@
   "dir": "ltr",
   "iarc_rating_id": "e39c13e6b7b1d6f9a9d8c7b6a5e4d3c2",
   "prefer_related_applications": false,
-  
-  // FIX: launch_handler as object
-  "launch_handler": {
-    "client_mode": "auto"
-  },
-  
-  // FIX: related_applications as empty array
-  "related_applications": [],
-  
-  // FIX: scope_extensions as empty array  
-  "scope_extensions": [],
-  
   "icons": [
     {
       "src": "images/icon-48.png",
