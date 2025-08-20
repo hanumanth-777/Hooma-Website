@@ -320,25 +320,34 @@
             <div class="phone-number">8333041231</div>
         </div>
     </div>
-   <script>
-// Faster Service Worker Registration
+  <script>
+// Fast Service Worker Registration with Timeout
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      navigator.serviceWorker.register('/Hooma-Website/sw.js', { scope: '/Hooma-Website/' })
-        .then(function(registration) {
-          console.log('SW registered: ', registration);
-        })
-        .catch(function(error) {
-          console.log('SW registration failed: ', error);
-        });
-    }, 1000); // Wait 1 second before registering
-  });
+  // Register immediately without waiting for page load
+  const registerSW = () => {
+    navigator.serviceWorker.register('/Hooma-Website/sw.js', { 
+      scope: '/Hooma-Website/' 
+    })
+    .then((registration) => {
+      console.log('SW registered successfully:', registration);
+      registration.update(); // Force update
+    })
+    .catch((error) => {
+      console.log('SW registration failed:', error);
+    });
+  };
+
+  // Try to register immediately
+  registerSW();
+  
+  // Also try when page is fully loaded as backup
+  window.addEventListener('load', registerSW);
 }
 </script>
 </body>
 
 </html>
+
 
 
 
