@@ -320,17 +320,26 @@
             <div class="phone-number">8333041231</div>
         </div>
     </div>
-    <script>
-// Register service worker
+   <script>
+// Faster Service Worker Registration
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/Hooma-Website/sw.js')
-    .then(() => console.log('Service Worker Registered'))
-    .catch(err => console.log('Service Worker Registration Failed'));
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      navigator.serviceWorker.register('/Hooma-Website/sw.js', { scope: '/Hooma-Website/' })
+        .then(function(registration) {
+          console.log('SW registered: ', registration);
+        })
+        .catch(function(error) {
+          console.log('SW registration failed: ', error);
+        });
+    }, 1000); // Wait 1 second before registering
+  });
 }
 </script>
 </body>
 
 </html>
+
 
 
 
