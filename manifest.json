@@ -38,10 +38,16 @@
       "purpose": "any"
     },
     {
-      "src": "images/icon-192.png",
+      "src": "images/icon-192-any.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "images/icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "images/icon-256.png",
@@ -56,10 +62,16 @@
       "purpose": "any"
     },
     {
-      "src": "images/icon-512.png",
+      "src": "images/icon-512-any.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "images/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "screenshots": [
@@ -76,12 +88,6 @@
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Hooma Mobile View"
-    }
-  ],
-  "protocol_handlers": [
-    {
-      "protocol": "web+hooma",
-      "url": "/Hooma-Website/?url=%s"
     }
   ]
 }
