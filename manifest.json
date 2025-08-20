@@ -12,6 +12,8 @@
   "categories": ["business", "finance", "lifestyle"],
   "lang": "en",
   "dir": "ltr",
+  "iarc_rating_id": "e39c13e6b7b1d6f9a9d8c7b6a5e4d3c2",
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "images/icon-48.png",
